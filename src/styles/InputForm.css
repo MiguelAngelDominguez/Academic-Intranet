@@ -1,0 +1,33 @@
+.InputForm{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    .inputLogin{
+        width: 12em;
+        height: 40px;
+        border-radius: 5px 0 0 5px;
+        border: 0.1em solid #151d24; 
+        background-color: #1c2730;
+        padding: 0 10px;
+        font-size: 16px;
+        color: #ffffff;
+        outline: none;
+        transition: all 0.3s ease;
+        &:focus{
+            border-color: #1c2730;
+        }
+    }
+    .inputIcon{
+        width: 2em;
+        height: 100%;
+        background-color: #2b3741;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        justify-items: center;
+        border-radius: 0 5px 5px 0;
+    }
+}

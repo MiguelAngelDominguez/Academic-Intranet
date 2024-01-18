@@ -1,0 +1,36 @@
+*{
+    --linkLineWidth: 2rem;
+    --linkLineHeight: 0.14em;
+}
+
+.hero-links {
+    padding-block: 1em;
+    height: 10%;
+    display: grid;
+    grid-template-columns: repeat(6,auto);
+    grid-gap: 1.34em;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    .bi{
+        font-size: 1.1em;
+    }
+}
+
+.hero-links::before{
+    /* position: relative; */
+    content: "";
+    top: -3rem;
+    width: var(--linkLineWidth);
+    height: var(--linkLineHeight);
+    background: #fff;
+}
+
+.hero-links::after{
+    /* position: relative; */
+    content: "";
+    bottom: -3rem;
+    width: var(--linkLineWidth);
+    height: var(--linkLineHeight);
+    background: #fff;
+}

@@ -1,0 +1,9 @@
+.Logo{
+    font-family: unset;
+    color: #50a0eb;
+    font-size: 1.6rem;
+    font-weight: 800;
+    .logoEfect{
+        color: #fff;
+    }
+}

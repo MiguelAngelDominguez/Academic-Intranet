@@ -1,0 +1,15 @@
+.Header{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: grid;
+    background-color: #080a0cb4;
+    backdrop-filter: blur(5px);
+    grid-template-columns: repeat(2, auto);
+    padding: 1em 1em;
+    justify-content: space-between;
+    align-items: center;
+    .bi-list{
+        transform: scale(1.8);  
+    }
+}

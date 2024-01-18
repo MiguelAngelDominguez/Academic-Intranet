@@ -1,0 +1,63 @@
+.ConteinerUser {
+    .userDasboard {
+        padding: 0.4em 1em;
+        display: grid;
+        grid-gap: 0.4em;
+
+        .bi-person-circle {
+            font-size: 4em;
+            color: #fff;
+            display: grid;
+            justify-content: center;
+        }
+
+        .userName {
+            font-size: 1.8em;
+            font-weight: 600;
+            display: grid;
+            justify-content: center;
+        }
+
+        .userInfo {
+            display: grid;
+            grid-gap: 0.8em;
+            padding-block: 0.8em;
+
+            .infoSlay {
+                display: grid;
+                grid-template-columns: repeat(2, auto);
+                padding-block-end: 0.54em;
+                border-bottom: 1px solid #222222;
+
+                .infoSlayItemValue {
+                    text-align: end;
+                }
+            }
+        }
+
+        .userCourseNotes {
+            .courseTitle {
+                font-size: 1.2em;
+                font-weight: 450;
+                padding-block: 0.8em;
+            }
+            .typeCourse{
+                display: grid;
+                grid-template-columns: 1fr 10fr;
+            }
+            .accordion-header {
+                display: grid;
+                .courseCollapsed {
+                    background-color: #22222200;
+                    border: none;
+                    color: #fff;
+                    display: grid;
+                    grid-template-columns: 1fr 7fr 1fr;
+                    justify-items: start;
+                    
+                }
+            }
+
+        }
+    }
+}

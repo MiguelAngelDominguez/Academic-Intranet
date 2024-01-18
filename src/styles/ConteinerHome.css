@@ -1,0 +1,40 @@
+.ConteinerHome {
+    .HeroSection {
+        margin: 0.8em 1em;
+        .HeroSectionHome {
+            height: 73vh;
+            background-image: url(../assets/estudiantes_fondo.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            filter: brightness(0.3) blur(0.08em);
+        }
+        .HeroSectionText{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            .HeroSectionTextTitle {
+                font-size: 2.5em;
+                font-weight: 600;
+                margin-bottom: 0.5em;
+            }
+            .HeroSectionTextSubtitle {
+                font-size: 1em;
+                color: #d4d4d4;
+                font-weight: 100;
+            }
+        }
+        .HeroSectionButton{
+            font-size: 1.1em;
+            font-weight: 600;
+            border-radius: 0.3em;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }   
+    
+}
