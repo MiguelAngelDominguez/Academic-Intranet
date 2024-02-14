@@ -1,47 +1,61 @@
+@import url('https://css.gg/css?=|chevron-down|chevron-up|');
 .ConteinerUser {
     .userDasboard {
         padding: 0.4em 1em;
         display: grid;
         grid-gap: 0.4em;
-
         .bi-person-circle {
             font-size: 4em;
             color: #fff;
             display: grid;
             justify-content: center;
         }
-
         .userName {
             font-size: 1.8em;
             font-weight: 600;
             display: grid;
             justify-content: center;
         }
-
         .userInfo {
             display: grid;
             grid-gap: 0.8em;
             padding-block: 0.8em;
-
             .infoSlay {
                 display: grid;
                 grid-template-columns: repeat(2, auto);
                 padding-block-end: 0.54em;
                 border-bottom: 1px solid #222222;
-
                 .infoSlayItemValue {
                     text-align: end;
                 }
             }
+            .slayQr {
+                display: grid;
+                grid-template-rows: repeat(2, auto);
+                grid-gap: 0.4em;
+                grid-template-areas: "title" "qr";
+                justify-content: center;
+                text-align: center;
+                .title {
+                    grid-area: title;
+                    font-weight: 500;
+                    color: #cfcfcf;
+                    display: grid;
+                    grid-template-columns: repeat(2, auto); 
+                    align-items: center;
+                }
+                .qr {
+                    grid-area: qr;
+                }
+            }
         }
-
         .userCourseNotes {
             .courseTitle {
                 font-size: 1.2em;
                 font-weight: 450;
                 padding-block: 0.8em;
             }
-            .typeCourse{
+            .typeCourse {
                 display: grid;
                 grid-template-columns: 1fr 10fr;
             }
@@ -54,10 +68,8 @@
                     display: grid;
                     grid-template-columns: 1fr 7fr 1fr;
                     justify-items: start;
-                    
                 }
             }
-
         }
     }
 }

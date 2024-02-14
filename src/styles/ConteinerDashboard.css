@@ -1,0 +1,26 @@
+.container{
+    .title{
+        text-align: center;
+    }
+    .containerButtons{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0.8em;
+        .btn{
+            font-weight: 500;
+            color: #fff;
+            .bi{
+                margin-inline-start: 0.5em;
+            }
+            .bi::before{
+                font-size: 1.3em;
+            }
+        }
+    }
+    .modal{
+        color: #fff;
+        .modal-content{
+            background-color: #2b2d30;
+        }
+    }
+}
