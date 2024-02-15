@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react';
 import * as bootstrap from 'bootstrap'
 import { useNavigate } from 'react-router-dom';
 import { AssignedCourses } from './AssignedCourses';
+import { AcordionQr } from './AcordionQr';
+import QRCode from 'qrcode.react';
 
 import '../styles/ConteinerUser.css'
 import '../styles/bootstrap.css'
@@ -13,10 +15,11 @@ export const ConteinerUser = ({ json }) => {
         dni: '',
         area: '',
         nivel: '',
+        codeqr: '',
         cursos: [],
     });
-    
-    const navigateTo  = useNavigate();
+
+    const navigateTo = useNavigate();
 
     useEffect(() => {
         // Recupera el id de usuario desde sessionStorage
@@ -35,6 +38,7 @@ export const ConteinerUser = ({ json }) => {
                     dni: foundUser.dni,
                     area: getAreaLabel(foundUser.area_postulacion),
                     nivel: getNivelLabel(foundUser.nivel),
+                    codeqr: foundUser.codeqr,
                     cursos: foundUser.cursos,
                 });
             }
@@ -99,6 +103,7 @@ export const ConteinerUser = ({ json }) => {
                         <div className='infoSlayItemTitle'>Nivel:</div>
                         <div className='infoSlayItemValue'>{user.nivel}</div>
                     </div>
+                    < AcordionQr codeqr={user.codeqr} />
                 </div>
 
                 <button className='btn btn-danger' onClick={handleLogout}>
@@ -109,8 +114,8 @@ export const ConteinerUser = ({ json }) => {
                     <h3 className='courseTitle'>
                         Cursos Asignados
                     </h3>
-                    
-                    <AssignedCourses courses={user.cursos}/>
+
+                    <AssignedCourses courses={user.cursos} />
                 </div>
             </div>
         </div>
