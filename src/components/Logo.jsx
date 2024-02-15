@@ -5,8 +5,8 @@ export const Logo = () => {
     return (
         <>
             <div className='Logo'>
-                Intra
-                <span className='logoEfect'>Wasi</span>
+                Tu
+                <span className='logoEfect'>Cole</span>
             </div>
         </>
     )
