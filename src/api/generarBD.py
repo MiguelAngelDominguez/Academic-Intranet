@@ -35,6 +35,20 @@ def generar_cursos(area_postulacion):
 
     return cursos_generales + cursos_especificos
 
+def generar_codeqr(estudiante):
+    # Construir el código QR string utilizando datos del estudiante
+    codeqr = ''.join([
+        str(estudiante['dni'])[:3],                         # Primeros 3 dígitos del DNI
+        estudiante['nombre_completo'][:3].upper(),         # Primeras 3 letras del nombre (mayúsculas)
+        str(estudiante['area_postulacion']),               # Área de postulación
+        estudiante['nivel'],                               # Nivel
+        estudiante['usuario'][-3:],                        # Últimos 3 caracteres del usuario
+        str(estudiante['contrasena'])[-3:]                 # Últimos 3 dígitos de la contraseña
+    ])
+
+    # Limitar la longitud del código QR a un máximo de 19 caracteres
+    return codeqr[:19]
+
 def generar_estudiante(dni, area_postulacion, nivel):
     area_inicial = {"1": "M", "2": "L", "3": "I", "4": "N"}[str(area_postulacion)]
     
@@ -50,6 +64,16 @@ def generar_estudiante(dni, area_postulacion, nivel):
             }
         })
 
+    # Generar el código QR string para el estudiante
+    codeqr = generar_codeqr({
+        "dni": dni,
+        "nombre_completo": fake.name(),
+        "area_postulacion": area_postulacion,
+        "nivel": nivel,
+        "usuario": usuario,
+        "contrasena": contrasena
+    })
+
     return {
         "dni": dni,
         "nombre_completo": fake.name(),
@@ -57,6 +81,7 @@ def generar_estudiante(dni, area_postulacion, nivel):
         "nivel": nivel,
         "usuario": usuario,
         "contrasena": contrasena,
+        "codeqr": codeqr,
         "cursos": cursos
     }
 
